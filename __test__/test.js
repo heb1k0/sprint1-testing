@@ -13,7 +13,7 @@ const {sumar, resta,multiplicar, dividir, getEmpleado, getSalario, getEmploye} =
 //     expect(resta(3, 2)).toBe(1);
 // });
 
-// test('5+5 igual 25', () => {
+// test('5*5 igual 25', () => {
 //     expect(multiplicar(5, 5)).toBe(25);
 // })
 
