@@ -4,7 +4,7 @@
   "description": "IT Academy",
   "main": "app/app.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/heb1k0/sprint1-testing/issues"
   },
-  "homepage": "https://github.com/heb1k0/sprint1-testing#readme"
+  "homepage": "https://github.com/heb1k0/sprint1-testing#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
