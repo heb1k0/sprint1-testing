@@ -75,8 +75,37 @@ let getSalario = (employe) =>{
 async function getEmploye (id){
     let empleado = await getEmpleado(id);
     let salary = await getSalario(empleado);
-    console.log(`El empleado ${empleado.name} cobra ${salary.salary}`) 
+    // console.log(`El empleado ${empleado.name} cobra ${salary.salary}`) 
     return `El empleado ${empleado.name} cobra ${salary.salary}`;
 } 
 
-module.exports = {sumar, resta,multiplicar, dividir, getEmpleado, getSalario, getEmploye};
+async function getDelaty(id){
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            try{
+                 let resultEmpleado = getEmploye(id);
+                 resolve(resultEmpleado)
+            }catch(err){
+                 reject(err);
+            }
+           
+
+        },200)
+    })
+
+}
+
+async function getEmployeDelay(id){
+
+    try{
+        return await getDelaty(id); 
+    } catch (err){
+        return err
+    }
+
+ }
+
+
+
+module.exports = {sumar, resta,multiplicar, dividir, getEmpleado, getSalario, getEmploye, getEmployeDelay};
